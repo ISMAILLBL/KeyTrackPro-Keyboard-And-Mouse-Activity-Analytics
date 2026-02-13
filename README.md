@@ -103,4 +103,5 @@ Database: - SQLite
 
 ## 👨‍💻 Authors
 
-Ismail Boulaich & Oussama Talibi
+Ismail Boulaich
+
