@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Section */
+.chart-section {
+    margin-bottom: 40px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 500px; /* Increased height for the chart */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-section select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Typing Pattern Analysis Section */
+.typing-pattern-section {
+    margin-bottom: 40px;
+}
+
+.typing-pattern-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.typing-pattern-section .metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.typing-pattern-section .metrics div {
+    text-align: center;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.typing-pattern-section .metrics div h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.typing-pattern-section .metrics div p {
+    font-size: 18px;
+    color: #333;
+}
+
+.typing-pattern-section .common-combinations {
+    text-align: center;
+}
+
+.typing-pattern-section .common-combinations h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.typing-pattern-section .common-combinations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.typing-pattern-section .common-combinations ul li {
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyboard Heatmap Section */
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.key {
+    padding: 20px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    min-width: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    position: relative; /* Required for tooltip positioning */
+}
+
+.key:hover {
+    background: #d0d0d0;
+    transform: scale(1.05);
+}
+
+/* Tooltip Styles */
+.key .tooltip {
+    visibility: hidden;
+    width: 80px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the key */
+    left: 50%;
+    margin-left: -40px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.key:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .key {
+        padding: 15px;
+        min-width: 40px;
+        font-size: 14px;
+    }
+
+    .row {
+        gap: 5px;
+    }
+
+    .chart-container {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .typing-pattern-section .metrics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .typing-pattern-section .metrics div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

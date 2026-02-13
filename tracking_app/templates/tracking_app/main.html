@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracking Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+            color: #e0e0e0;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 60px 20px;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #1a2a6c;
+        }
+
+        .dashboard-card p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a2a6c;
+            color: white;
+            margin-top: 60px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        footer a {
+            color: #fdbb2d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>KeyTrack Pro</h1>
+        <p>Analyze your keyboard and mouse usage with powerful insights.</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Mouse Dashboard Card -->
+        <div class="dashboard-card" onclick="window.location.href=''">
+            <h2>Mouse Dashboard</h2>
+            <p>Explore heatmaps and click patterns for your mouse usage.</p>
+        </div>
+
+        <!-- Keyboard Dashboard Card -->
+        <div class="dashboard-card" onclick="window.location.href='{% url 'dashboard' %}'">
+            <h2>Keyboard Dashboard</h2>
+            <p>Analyze typing patterns and key usage statistics.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 KeyTrack Pro  <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
